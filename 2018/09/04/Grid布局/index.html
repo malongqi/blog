@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="前端开发">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/blog/img/favicon.ico">
+
+    <title>
+        
+        
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/aircloud.css">
+    <link rel="stylesheet" href="/blog/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+   涂涂写写的日常
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/blog/image/qqq.jpeg">
+        </div>
+        <div class="name">
+            <i>lori</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/blog/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Grid布局详述"><span class="toc-text">Grid布局详述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#网格元素表现样式："><span class="toc-text">网格元素表现样式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网格项表现样式："><span class="toc-text">网格项表现样式：</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> 涂涂写写的日常 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2018-09-04 09:14:36</span></span>
+        
+        
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h1 id="Grid布局详述"><a href="#Grid布局详述" class="headerlink" title="Grid布局详述"></a>Grid布局详述</h1><p>grid布局，网格布局，可以将页面划分为不同区域，类似于表格网格布局可以使元素对齐到行和列中</p>
+<p>grid布局有两个核心部分，容器和元素</p>
+<p>下面是一个 wrapper 元素，内部包含6个 items ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;item item1&quot; style=&quot;background-color: #E6CC6E;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item3&quot; style=&quot;background-color: #B0D686;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #F96;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #6C9;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #37A7FF;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #6C9;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>wrapper 设置为网格类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.wrapper &#123;</span><br><span class="line">	display: grid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="网格元素表现样式："><a href="#网格元素表现样式：" class="headerlink" title="网格元素表现样式："></a>网格元素表现样式：</h2><p><b>1、display: grid | inline-grid | subgrid;</b></p>
+<p>grid：生成块级网格，<br>inline-grid：生成行内网格<br>subgrid：网格容器本身是网格项，此属性用来继承父容器的网格行和列的大小</p>
+<p><b>2、grid-template-columns: &lt;track-size&gt; … | &lt;line-name&gt; &lt;track-size&gt; … ;</b></p>
+<p>   grid-template-rows: &lt;track-size&gt; … | &lt;line-name&gt; &lt;track-size&gt; … ;</p>
+<p>设置网格列，行的大小</p>
+<p>– &lt;track-size&gt;： 可以是长度值，百分比，或者等份网格容器中可用空间（使用 fr 单位）</p>
+<p>– &lt;line-name&gt;：你可以选择的任意名称</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.wrapper &#123;</span><br><span class="line">	display: grid;</span><br><span class="line">	grid-template-columns: 1fr 1fr 1fr 1fr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<center><br><img src="./grid-img/df.png" alt="img"><br></center>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.wrapper&#123;</span><br><span class="line">	display: grid;</span><br><span class="line">	grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];</span><br><span class="line">    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<center><br><img src="./grid-img/jd.png" alt="img"><br></center>
+
+
+<p><b>3、 grid-column-gap：&lt;line-size&gt;;  grid-row-gap: &lt;line-size&gt; ; grid-gap: &lt;line-size&gt;</b></p>
+<p>设置横向/纵向单元格，最后一个样式总体设置 grid-column-gap 和 grid-row-gap简写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.wrapper &#123;</span><br><span class="line">	display: grid;</span><br><span class="line">	grid-template-columns: 1fr 1fr 1fr 1fr;</span><br><span class="line">	grid-gap: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<center><br><img src="./grid-img/jg.png" alt="img"><br></center>
+
+<p><b>4、 justify-items: start | end | center | stretch（默认） ;</b></p>
+<p>垂直于列网格线对齐，适用于网格容器里的所有网格项。</p>
+<p>属性值：</p>
+<ul>
+<li>start: 左对齐。  </li>
+<li>end: 右对齐。  </li>
+<li>center: 居中对齐。  </li>
+<li>stretch: 填满（默认）。</li>
+</ul>
+<p><b>5、align-items: start | end | center | stretch ;</b></p>
+<p>垂直于行网格线对齐，适用于网格容器里的所有网格项。</p>
+<p>属性值：</p>
+<ul>
+<li>start： 顶部对齐。  </li>
+<li>end： 底部对齐。  </li>
+<li>center： 居中对齐。  </li>
+<li>stretch：填满（默认）。</li>
+</ul>
+<p><b>6、justify-content: start | end | center | stretch | space-around | space-between | space-evenly ;</b></p>
+<p>如果用像px非弹性单位定义的话，总网格区域大小有可能小于网格容器，这时候你可以设置网格的对齐方式（垂直于列网格线对齐）。</p>
+<p>属性值：</p>
+<ul>
+<li>start: 左对齐。  </li>
+<li>end: 右对齐。  </li>
+<li>center: 居中对齐。  </li>
+<li>stretch: 填满网格容器。  </li>
+<li>space-around: 网格项两边间距相等，网格项之间间隔是单侧的2倍。  </li>
+<li>space-between: 两边对齐，网格项之间间隔相等。  </li>
+<li>space-evenly: 网格项间隔相等。</li>
+</ul>
+<h2 id="网格项表现样式："><a href="#网格项表现样式：" class="headerlink" title="网格项表现样式："></a>网格项表现样式：</h2><p><b>1、grid-column / grid-row : &lt;start-line&gt; / &lt;end-line&gt; </b></p>
+<p>分别为 grid-column-start + grid-column-end 和 grid-row-start + grid-row-end 的缩写形式。</p>
+<p>表示该网格项的开始和结束网格线的位置，一般用来定位某个网格项的特定位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.item1&#123;</span><br><span class="line">	 grid-column: 1 / 2;</span><br><span class="line">	 grid-row: 2 / 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<center><br>    <img src="./grid-img/wz.png" alt="img"><br></center>
+
+<p><b>2、justify-self: start | end | center | stretch </b></p>
+<p>沿着 行轴线(row axis) 对齐 网格项 内的内容（ 相反的属性是 align-self ，沿着列轴线(column axis)对齐）。此值适用于单个网格项内的内容。</p>
+<ul>
+<li>start：将内容对齐到网格区域的左侧  </li>
+<li>end：将内容对齐到网格区域的右侧  </li>
+<li>center：将内容对齐到网格区域的中间（水平居中）  </li>
+<li>stretch：填充整个网格区域的宽度（这是默认值）  </li>
+</ul>
+<p><b>3、align-self: start | end | center | stretch </b></p>
+<p>沿着 列轴线(column axis) 对齐 网格项 内的内容（ 相反的属性是 justify-self ，沿着 行轴线(row axis) 对齐）。此值适用于单个网格项内的内容</p>
+<ul>
+<li>start：将内容对齐到网格区域的顶部  </li>
+<li>end：将内容对齐到网格区域的底部  </li>
+<li>center：将内容对齐到网格区域的中间（垂直居中）  </li>
+<li>stretch：填充整个网格区域的高度（这是默认值）</li>
+</ul>
+
+        
+        <div id="comment-container">
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/blog/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/blog/js/index.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</html>

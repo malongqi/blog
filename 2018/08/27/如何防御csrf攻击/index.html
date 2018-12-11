@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li class="active">
+            <li>
                 <a href="/blog/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>HOME</span>
@@ -81,6 +81,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何防御CSRF攻击"><span class="toc-text">如何防御CSRF攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSRF攻击原理及过程"><span class="toc-text">CSRF攻击原理及过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSRF-攻击的对象"><span class="toc-text">CSRF 攻击的对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSRF漏洞防御"><span class="toc-text">CSRF漏洞防御</span></a></li></ol></li></ol>
+</div>
+    
 </div>
 
 
@@ -104,126 +108,54 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 720px">
-    
-    <div class="post-preview">
-        <div class="post-time">2018-09-26</div>
-        <div class="post-info">
-            <a href="/blog/2018/09/26/缓存SDK/">
-                <h3>
-                    Untitled
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-09-13</div>
-        <div class="post-info">
-            <a href="/blog/2018/09/13/TCP/IP协议各层的作用/">
-                <h3>
-                    Untitled
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2018-08-27 10:48:25</span></span>
+        
+        
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-09-07</div>
-        <div class="post-info">
-            <a href="/blog/2018/09/07/JS基础篇/">
-                <h3>
-                    Untitled
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-09-07</div>
-        <div class="post-info">
-            <a href="/blog/2018/09/07/JS设计模式/">
-                <h3>
-                    Untitled
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-09-06</div>
-        <div class="post-info">
-            <a href="/blog/2018/09/06/vue-登陆拦截/">
-                <h3>
-                    Untitled
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-09-04</div>
-        <div class="post-info">
-            <a href="/blog/2018/09/04/index/">
-                <h3>
-                    Untitled
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-09-04</div>
-        <div class="post-info">
-            <a href="/blog/2018/09/04/Grid布局/">
-                <h3>
-                    Untitled
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2018-08-27</div>
-        <div class="post-info">
-            <a href="/blog/2018/08/27/如何防御csrf攻击/">
-                <h3>
-                    Untitled
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-</div>
-<ul class="pager">
-    
-    
+    <div class="post-content ">
+        <h1 id="如何防御CSRF攻击"><a href="#如何防御CSRF攻击" class="headerlink" title="如何防御CSRF攻击"></a>如何防御CSRF攻击</h1><p>CSRF（Cross Site Request Forgery 跨站请求伪造）是一种网路攻击方式。</p>
+<h3 id="CSRF攻击原理及过程"><a href="#CSRF攻击原理及过程" class="headerlink" title="CSRF攻击原理及过程"></a>CSRF攻击原理及过程</h3><p>1、用户C打开浏览器，访问受信任网站A，输入用户名和密码请求登录网站A；</p>
+<p>2、在用户信息通过验证后，网站A产生Cookie信息并返回给浏览器，此时用户登录网站A成功，可以正常发送请求到网站A；</p>
+<p>3、用户未退出网站A之前，在同一浏览器中，打开一个TAB页访问网站B；</p>
+<p>4、网站B接收到用户请求后，返回一些攻击性代码，并发出一个请求要求访问第三方站点A；</p>
+<p>5、浏览器在接收到这些攻击性代码后，根据网站B的请求，在用户不知情的情况下携带Cookie信息，向网站A发出请求。网站A并不知道该请求其实是由B发起的，所以会根据用户C的Cookie信息以C的权限处理该请求，导致来自网站B的恶意代码被执行。</p>
+<h3 id="CSRF-攻击的对象"><a href="#CSRF-攻击的对象" class="headerlink" title="CSRF 攻击的对象"></a>CSRF 攻击的对象</h3><p>在讨论CSRF防御之前，首先要明确CSRF攻击的对象。CSRF攻击是黑客借助受害者的cookie骗取浏览器的信任，但是黑客并不能<br>拿到cookie，也看不到内容，由于浏览器的同源策略的限制对于服务器返回的结果</p>
+<h3 id="CSRF漏洞防御"><a href="#CSRF漏洞防御" class="headerlink" title="CSRF漏洞防御"></a>CSRF漏洞防御</h3><p>目前防御CSRF攻击的主要方案有三种：</p>
+<p>1、验证HTTP Referer字段  </p>
+<p>2、在请求地址中添加Token并验证  </p>
+<p>具体方案：  </p>
+<p>1、对于容易产生安全漏洞的接口，尽量使用POST，限制使用GET  </p>
+<p>2、添加验证码  </p>
+<p>3、Referer Check   </p>
+<p>Referer Check 在WEB中最常见的是“防止图片盗链”，同理，也可以用于检查请求是否来自于合法的“源”，<br>但是因为服务器并不是什么时候都能娶到Referer，所以并不能作为CRSRF防御的有效手段，但是可以监控是否发生攻击</p>
+<p>4、Anti CSRF Token（最有效的解决方案）</p>
+<ul>
+<li><p>用户访问某个表单页面</p>
+</li>
+<li><p>服务端生成Token（随机不可预测的），放在用户Session或者Cookie中</p>
+</li>
+<li><p>提交表单要携带Token参数最好放在HTTP请求头中（这样求求地址不会记录在浏览器地址中）</p>
+</li>
+<li><p>请求提交后，服务端验证Token的合法性</p>
+</li>
 </ul>
 
+        
+        <div id="comment-container">
+        </div>
+    </div>
+</div>
     </div>
 </div>
 
@@ -262,7 +194,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = ""
     window.hexo_root = "/blog/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/blog/js/index.js"></script>
