@@ -56,25 +56,25 @@
             <li>
                 <a href="/blog/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>HOME</span>
+                    <span>主页</span>
                 </a>
             </li>
             <li>
                 <a href="/blog/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>TAGS</span>
+                    <span>标签</span>
                 </a>
             </li>
             <li>
                 <a href="/blog/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>ARCHIVES</span>
+                    <span>存档</span>
                 </a>
             </li>
             <li>
                 <a href="/blog/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>ABOUT</span>
+                    <span>关于</span>
                 </a>
             </li>
             
@@ -93,7 +93,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input">
-            <span id="begin-search">search</span>
+            <span id="begin-search">搜索</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -116,10 +116,10 @@
     </div>
 
     <div class="post-meta">
-        <span class="attr">Post：<span>2018-08-27 18:08:16</span></span>
+        <span class="attr">发布于：<span>2018-08-27 18:08:16</span></span>
         
         
-        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
 </span>
 
     </div>
@@ -130,7 +130,7 @@
 <p>3、用户未退出网站A之前，在同一浏览器中，打开一个TAB页访问网站B；</p>
 <p>4、网站B接收到用户请求后，返回一些攻击性代码，并发出一个请求要求访问第三方站点A；</p>
 <p>5、浏览器在接收到这些攻击性代码后，根据网站B的请求，在用户不知情的情况下携带Cookie信息，向网站A发出请求。网站A并不知道该请求其实是由B发起的，所以会根据用户C的Cookie信息以C的权限处理该请求，导致来自网站B的恶意代码被执行。</p>
-<h3 id="CSRF-攻击的对象"><a href="#CSRF-攻击的对象" class="headerlink" title="CSRF 攻击的对象"></a>CSRF 攻击的对象</h3><p>在讨论CSRF防御之前，首先要明确CSRF攻击的对象。CSRF攻击是黑客借助受害者的cookie骗取浏览器的信任，但是黑客并不能<br>拿到cookie，也看不到内容，由于浏览器的同源策略的限制对于服务器返回的结果</p>
+<h3 id="CSRF-攻击的对象"><a href="#CSRF-攻击的对象" class="headerlink" title="CSRF 攻击的对象"></a>CSRF 攻击的对象</h3><p>在讨论CSRF防御之前，首先要明确CSRF攻击的对象。CSRF攻击是黑客借助受害者的cookie骗取浏览器的信任，但是黑客并不能拿到cookie，也看不到内容，由于浏览器的同源策略的限制对于服务器返回的结果</p>
 <h3 id="CSRF漏洞防御"><a href="#CSRF漏洞防御" class="headerlink" title="CSRF漏洞防御"></a>CSRF漏洞防御</h3><p>目前防御CSRF攻击的主要方案有三种：</p>
 <p>1、验证HTTP Referer字段  </p>
 <p>2、在请求地址中添加Token并验证  </p>
@@ -138,7 +138,7 @@
 <p>1、对于容易产生安全漏洞的接口，尽量使用POST，限制使用GET  </p>
 <p>2、添加验证码  </p>
 <p>3、Referer Check   </p>
-<p>Referer Check 在WEB中最常见的是“防止图片盗链”，同理，也可以用于检查请求是否来自于合法的“源”，<br>但是因为服务器并不是什么时候都能娶到Referer，所以并不能作为CRSRF防御的有效手段，但是可以监控是否发生攻击</p>
+<p>Referer Check 在WEB中最常见的是“防止图片盗链”，同理，也可以用于检查请求是否来自于合法的“源”，但是因为服务器并不是什么时候都能娶到Referer，所以并不能作为CRSRF防御的有效手段，但是可以监控是否发生攻击</p>
 <p>4、Anti CSRF Token（最有效的解决方案）</p>
 <ul>
 <li><p>用户访问某个表单页面</p>

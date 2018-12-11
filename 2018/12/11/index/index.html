@@ -11,7 +11,7 @@
 
     <title>
         
-        vue-登陆拦截 - undefined
+        
         
     </title>
 
@@ -82,7 +82,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vue-判断用户登陆状态跳转不同页面"><span class="toc-text">vue 判断用户登陆状态跳转不同页面</span></a></li></ol>
+    
 </div>
     
 </div>
@@ -112,21 +112,73 @@
 
 <div class="post-container">
     <div class="post-title">
-        vue-登陆拦截
+        
     </div>
 
     <div class="post-meta">
-        <span class="attr">发布于：<span>2018-09-06 18:08:16</span></span>
+        <span class="attr">发布于：<span>2018-12-11 17:45:48</span></span>
         
-        
+        </span>
         <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
 </span>
-
+</span>
     </div>
     <div class="post-content ">
-        <h1 id="vue-判断用户登陆状态跳转不同页面"><a href="#vue-判断用户登陆状态跳转不同页面" class="headerlink" title="vue 判断用户登陆状态跳转不同页面"></a>vue 判断用户登陆状态跳转不同页面</h1><p>vue 提供了路由入口的钩子函数，可拦截到来源页面和要去向的页面</p>
-<p>我们有如果从分享的链接进入，登陆后要直接跳转到分享的具体页面中，<br>所以我在拿到用户的要访问的路径存储到sessionstora中，在用户登陆后可直接push到对应的页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 路由跳转拦截</span><br><span class="line">router.beforeEach((to, from, next) =&gt; &#123;</span><br><span class="line">  if (to.path !== &apos;/login&apos;) &#123;</span><br><span class="line">    if (getCookie(&apos;userinfo&apos;)) &#123;</span><br><span class="line">      next()</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      next(&#123;path: &apos;/login&apos;&#125;) // 指定跳转页面</span><br><span class="line">      setSessionStorage(&apos;path&apos;, to.path) </span><br><span class="line">      // 这一步是存储用户跳转页面</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    next() //正常跳转走向</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+        <!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.wrapper{
+			display: grid;
+			/*grid-template-columns: repeat(1) 100px;*/
+			/*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+			/*grid-template-rows: 50%  50% ;*/
+			/*grid-gap:5px;*/
+		    grid-template-columns: 60px 60px;
+		    grid-template-rows: 90px 90px;
+			grid-auto-columns: 60px;
+		}
+		.item{
+			text-align: center;
+		}
+		.item1{
+			/*grid-area: header;*/
+			/*grid-column: span 3;*/
+			 grid-column: 1 / 2;
+			 grid-row: 2 / 3;
+		}
+		.item3{
+			/*height: 300px;
+			grid-row: 2 / 4 ;*/
+			grid-column: 5 / 6;
+    		grid-row: 2 / 3;
+		}
+		.item-a{
+		  grid-area: header;
+		  display: grid;
+		  grid-template-columns: 1fr 1fr;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="item item1" style="background-color: #E6CC6E;">item1</div>
+		<div class="item item3" style="background-color: #B0D686;">w</div>
+		<div class="item item2" style="background-color: #F96;">w</div>
+		<div class="item item2" style="background-color: #6C9;">w</div>
+		<div class="item item2" style="background-color: #37A7FF;">w</div>
+		<div class="item item2" style="background-color: #6C9;">w</div>
+		<div class="item item2" style="background-color: #37A7FF;">w</div>
+		<div class="item item2" style="background-color: #6C9;">w</div>
+
+	</div>
+</body>
+</html>
         
         <div id="comment-container">
         </div>

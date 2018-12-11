@@ -11,7 +11,7 @@
 
     <title>
         
-        vue-登陆拦截 - undefined
+        first-blog - undefined
         
     </title>
 
@@ -82,7 +82,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vue-判断用户登陆状态跳转不同页面"><span class="toc-text">vue 判断用户登陆状态跳转不同页面</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#怎样做才好"><span class="toc-text">怎样做才好</span></a></li></ol>
 </div>
     
 </div>
@@ -112,11 +112,11 @@
 
 <div class="post-container">
     <div class="post-title">
-        vue-登陆拦截
+        first-blog
     </div>
 
     <div class="post-meta">
-        <span class="attr">发布于：<span>2018-09-06 18:08:16</span></span>
+        <span class="attr">发布于：<span>2018-08-23 18:08:16</span></span>
         
         
         <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
@@ -124,9 +124,7 @@
 
     </div>
     <div class="post-content ">
-        <h1 id="vue-判断用户登陆状态跳转不同页面"><a href="#vue-判断用户登陆状态跳转不同页面" class="headerlink" title="vue 判断用户登陆状态跳转不同页面"></a>vue 判断用户登陆状态跳转不同页面</h1><p>vue 提供了路由入口的钩子函数，可拦截到来源页面和要去向的页面</p>
-<p>我们有如果从分享的链接进入，登陆后要直接跳转到分享的具体页面中，<br>所以我在拿到用户的要访问的路径存储到sessionstora中，在用户登陆后可直接push到对应的页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 路由跳转拦截</span><br><span class="line">router.beforeEach((to, from, next) =&gt; &#123;</span><br><span class="line">  if (to.path !== &apos;/login&apos;) &#123;</span><br><span class="line">    if (getCookie(&apos;userinfo&apos;)) &#123;</span><br><span class="line">      next()</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      next(&#123;path: &apos;/login&apos;&#125;) // 指定跳转页面</span><br><span class="line">      setSessionStorage(&apos;path&apos;, to.path) </span><br><span class="line">      // 这一步是存储用户跳转页面</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    next() //正常跳转走向</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+        <h2 id="怎样做才好"><a href="#怎样做才好" class="headerlink" title="怎样做才好"></a>怎样做才好</h2>
         
         <div id="comment-container">
         </div>
