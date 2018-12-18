@@ -48,7 +48,7 @@
             <img src="/blog/image/qqq.jpeg">
         </div>
         <div class="name">
-            <i>lori</i>
+            lori
         </div>
     </div>
     <div class="contents" id="nav-content">
@@ -82,7 +82,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Grid布局详述"><span class="toc-text">Grid布局详述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#网格元素表现样式："><span class="toc-text">网格元素表现样式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网格项表现样式："><span class="toc-text">网格项表现样式：</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Grid布局详述"><span class="toc-text">Grid布局详述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网格元素表现样式："><span class="toc-text">网格元素表现样式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网格项表现样式："><span class="toc-text">网格项表现样式：</span></a></li></ol>
 </div>
     
 </div>
@@ -124,30 +124,30 @@
 
     </div>
     <div class="post-content ">
-        <h1 id="Grid布局详述"><a href="#Grid布局详述" class="headerlink" title="Grid布局详述"></a>Grid布局详述</h1><p>grid布局，网格布局，可以将页面划分为不同区域，类似于表格网格布局可以使元素对齐到行和列中</p>
+        <h2 id="Grid布局详述"><a href="#Grid布局详述" class="headerlink" title="Grid布局详述"></a>Grid布局详述</h2><p>grid布局，网格布局，可以将页面划分为不同区域，类似于表格网格布局可以使元素对齐到行和列中</p>
 <p>grid布局有两个核心部分，容器和元素</p>
 <p>下面是一个 wrapper 元素，内部包含6个 items ：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;item item1&quot; style=&quot;background-color: #E6CC6E;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item3&quot; style=&quot;background-color: #B0D686;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #F96;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #6C9;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #37A7FF;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #6C9;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>wrapper 设置为网格类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.wrapper &#123;</span><br><span class="line">	display: grid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="网格元素表现样式："><a href="#网格元素表现样式：" class="headerlink" title="网格元素表现样式："></a>网格元素表现样式：</h2><p><b>1、display: grid | inline-grid | subgrid;</b></p>
-<p>grid：生成块级网格，<br>inline-grid：生成行内网格<br>subgrid：网格容器本身是网格项，此属性用来继承父容器的网格行和列的大小</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;wrapper&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;item item1&quot; style=&quot;background-color: #E6CC6E;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item3&quot; style=&quot;background-color: #B0D686;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #F96;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #6C9;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #37A7FF;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">	&lt;div class=&quot;item item2&quot; style=&quot;background-color: #6C9;&quot;&gt;w&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</code></pre><p>wrapper 设置为网格类型</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.wrapper &#123;</span><br><span class="line">	display: grid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="网格元素表现样式："><a href="#网格元素表现样式：" class="headerlink" title="网格元素表现样式："></a>网格元素表现样式：</h2><p><b>1、display: grid | inline-grid | subgrid;</b></p>
+<p>grid：生成块级网格<br>inline-grid：生成行内网格<br>subgrid：网格容器本身是网格项，此属性用来继承父容器的网格行和列的大小</p>
 <p><b>2、grid-template-columns: &lt;track-size&gt; … | &lt;line-name&gt; &lt;track-size&gt; … ;</b></p>
 <p>   grid-template-rows: &lt;track-size&gt; … | &lt;line-name&gt; &lt;track-size&gt; … ;</p>
 <p>设置网格列，行的大小</p>
 <p>– &lt;track-size&gt;： 可以是长度值，百分比，或者等份网格容器中可用空间（使用 fr 单位）</p>
 <p>– &lt;line-name&gt;：你可以选择的任意名称</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.wrapper &#123;</span><br><span class="line">	display: grid;</span><br><span class="line">	grid-template-columns: 1fr 1fr 1fr 1fr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><img src="./image/grid-img/df.png" alt="img"><br></center>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.wrapper &#123;</span><br><span class="line">	display: grid;</span><br><span class="line">	grid-template-columns: 1fr 1fr 1fr 1fr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><center><br><img src="./image/grid-img/df.png" alt="img"><br></center>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.wrapper&#123;</span><br><span class="line">	display: grid;</span><br><span class="line">	grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];</span><br><span class="line">    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><img src="./image/grid-img/jd.png" alt="img"><br></center>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.wrapper&#123;</span><br><span class="line">	display: grid;</span><br><span class="line">	grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];</span><br><span class="line">    grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><center><br><img src="./image/grid-img/jd.png" alt="img"><br></center>
 
 
 <p><b>3、 grid-column-gap：&lt;line-size&gt;;  grid-row-gap: &lt;line-size&gt; ; grid-gap: &lt;line-size&gt;</b></p>
 <p>设置横向/纵向单元格，最后一个样式总体设置 grid-column-gap 和 grid-row-gap简写</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.wrapper &#123;</span><br><span class="line">	display: grid;</span><br><span class="line">	grid-template-columns: 1fr 1fr 1fr 1fr;</span><br><span class="line">	grid-gap: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><img src="./image/grid-img/jg.png" alt="img"><br></center>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.wrapper &#123;</span><br><span class="line">	display: grid;</span><br><span class="line">	grid-template-columns: 1fr 1fr 1fr 1fr;</span><br><span class="line">	grid-gap: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><center><br><img src="./image/grid-img/jg.png" alt="img"><br></center>
 
 <p><b>4、 justify-items: start | end | center | stretch（默认） ;</b></p>
 <p>垂直于列网格线对齐，适用于网格容器里的所有网格项。</p>
@@ -182,8 +182,8 @@
 <h2 id="网格项表现样式："><a href="#网格项表现样式：" class="headerlink" title="网格项表现样式："></a>网格项表现样式：</h2><p><b>1、grid-column / grid-row : &lt;start-line&gt; / &lt;end-line&gt; </b></p>
 <p>分别为 grid-column-start + grid-column-end 和 grid-row-start + grid-row-end 的缩写形式。</p>
 <p>表示该网格项的开始和结束网格线的位置，一般用来定位某个网格项的特定位置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.item1&#123;</span><br><span class="line">	 grid-column: 1 / 2;</span><br><span class="line">	 grid-row: 2 / 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br>    <img src="./image/grid-img/wz.png" alt="img"><br></center>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.item1&#123;</span><br><span class="line">	 grid-column: 1 / 2;</span><br><span class="line">	 grid-row: 2 / 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><center><br>    <img src="./image/grid-img/wz.png" alt="img"><br></center>
 
 <p><b>2、justify-self: start | end | center | stretch </b></p>
 <p>沿着 行轴线(row axis) 对齐 网格项 内的内容（ 相反的属性是 align-self ，沿着列轴线(column axis)对齐）。此值适用于单个网格项内的内容。</p>
